@@ -182,6 +182,22 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .nitem{padding:8px 16px;border-radius:18px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;transition:all .2s;font-size:11px;font-weight:700;color:var(--muted);min-width:56px}
 .nitem.act{background:var(--sea);color:#fff}
 .nitem span:first-child{font-size:17px}
+/* API KEY */
+.apikey-wrap{margin-top:22px;width:100%;max-width:490px}
+.apikey-toggle{display:flex;align-items:center;gap:7px;justify-content:center;padding:8px 18px;border-radius:22px;border:2px dashed rgba(14,165,233,.3);background:rgba(255,255,255,.5);color:var(--muted);font-size:12px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;width:100%}
+.apikey-toggle:hover{border-color:var(--sea);color:var(--sea-deep);background:rgba(255,255,255,.8)}
+.apikey-toggle.ok{border-color:var(--mint);color:var(--mint);background:var(--mint-light)}
+.apikey-panel{display:none;background:rgba(255,255,255,.88);border-radius:16px;padding:16px;border:2px solid rgba(14,165,233,.18);margin-top:10px;backdrop-filter:blur(8px);text-align:left}
+.apikey-panel.open{display:block}
+.apikey-panel label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px}
+.apikey-row{display:flex;gap:8px}
+.apikey-input{flex:1;padding:10px 14px;border-radius:11px;border:2px solid var(--sea-mid);font-size:14px;font-family:'Nunito',sans-serif;background:#fff;outline:none;transition:border-color .2s}
+.apikey-input:focus{border-color:var(--sea)}
+.apikey-save{padding:10px 16px;border-radius:11px;background:var(--sea);border:none;color:#fff;font-weight:700;font-size:13px;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap;transition:all .2s}
+.apikey-save:hover{background:var(--sea-deep)}
+.apikey-hint{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6}
+.apikey-hint a{color:var(--sea);text-decoration:none;font-weight:700}
+/* ERROR */
 .err-box{background:#FFF1F1;border:2px solid var(--coral);border-radius:16px;padding:20px;text-align:center;margin:16px 0}
 .err-box .err-ico{font-size:36px;margin-bottom:8px}
 .err-box .err-title{font-size:15px;font-weight:800;color:var(--coral);margin-bottom:5px}
@@ -222,6 +238,25 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
     <div class="chip" onclick="sD('Dubai')"><span>🇦🇪</span>Dubai</div>
     <div class="chip" onclick="sD('New York')"><span>🗽</span>New York</div>
     <div class="chip" onclick="sD('Santorini')"><span>🇬🇷</span>Santorini</div>
+  </div>
+
+  <!-- API Key -->
+  <div class="apikey-wrap">
+    <button class="apikey-toggle" id="apiKeyToggle" onclick="togApiKey()">
+      <span id="apiKeyIcon">🔑</span>
+      <span id="apiKeyLabel">API Anahtarı Gerekli — Ayarla</span>
+    </button>
+    <div class="apikey-panel" id="apiKeyPanel">
+      <label>Anthropic API Anahtarınız</label>
+      <div class="apikey-row">
+        <input class="apikey-input" id="apiKeyInput" type="password" placeholder="sk-ant-api03-...">
+        <button class="apikey-save" onclick="saveApiKey()">Kaydet ✓</button>
+      </div>
+      <div class="apikey-hint">
+        Anahtarınızı <a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com</a> adresinden alabilirsiniz.<br>
+        Anahtar yalnızca bu sekme oturumunda saklanır, hiçbir yere gönderilmez.
+      </div>
+    </div>
   </div>
 </div>
 
@@ -374,7 +409,7 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 </div>
 
 <script>
-let S={dest:'',days:0,tickets:[],plan:null,places:[],selPlaces:[],style:'',mapQ:''};
+let S={dest:'',days:0,tickets:[],plan:null,places:[],selPlaces:[],style:'',mapQ:'',apiKey:sessionStorage.getItem('g_api_key')||''};
 const TI={flight:'✈️',hotel:'🏨',train:'🚂',activity:'🎭',bus:'🚌'};
 const TL={flight:'Uçuş',hotel:'Otel',train:'Tren',activity:'Aktivite',bus:'Otobüs'};
 const SL={culture:'Kültürel Keşif',food:'Yiyip İçerken Gezi',vibe:'Kültür + Şehrin Ruhu',relax:'Dinlence & Keyif'};
@@ -386,9 +421,22 @@ const SL={culture:'Kültürel Keşif',food:'Yiyip İçerken Gezi',vibe:'Kültür
 
 // Safe Anthropic API call — handles missing content, error objects, empty text
 async function callClaude(prompt, maxTokens) {
+  const key = S.apiKey || sessionStorage.getItem('g_api_key') || '';
+  if (!key) {
+    // Surface a helpful error and open the API key panel
+    document.getElementById('apiKeyPanel').classList.add('open');
+    document.getElementById('apiKeyToggle').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    throw new Error('API anahtarı girilmedi. Lütfen hoş geldiniz ekranından anahtarınızı girin.');
+  }
+
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
       max_tokens: maxTokens || 1000,
@@ -400,7 +448,12 @@ async function callClaude(prompt, maxTokens) {
   try { data = await res.json(); } catch(e) { throw new Error('Sunucudan geçersiz yanıt geldi'); }
 
   // API-level error (e.g. auth, rate limit, bad request)
-  if (data.error) throw new Error('API hatası: ' + (data.error.message || JSON.stringify(data.error)));
+  if (data.error) {
+    const msg = data.error.message || JSON.stringify(data.error);
+    if (res.status === 401) throw new Error('API anahtarı geçersiz. Lütfen anahtarınızı kontrol edin.');
+    if (res.status === 429) throw new Error('İstek limiti aşıldı. Bir dakika bekleyip tekrar deneyin.');
+    throw new Error('API hatası: ' + msg);
+  }
 
   // Extract text from all content blocks safely
   const text = (data.content || [])
@@ -433,6 +486,32 @@ function showS(id) {
 }
 
 // ── WELCOME ──────────────────────────────────────────────────────────────────
+function togApiKey() {
+  document.getElementById('apiKeyPanel').classList.toggle('open');
+  const inp = document.getElementById('apiKeyInput');
+  if (S.apiKey) inp.value = S.apiKey;
+}
+
+function saveApiKey() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key) { alert('Lütfen bir API anahtarı girin'); return; }
+  S.apiKey = key;
+  sessionStorage.setItem('g_api_key', key);
+  document.getElementById('apiKeyPanel').classList.remove('open');
+  document.getElementById('apiKeyToggle').className = 'apikey-toggle ok';
+  document.getElementById('apiKeyIcon').textContent = '✅';
+  document.getElementById('apiKeyLabel').textContent = 'API Anahtarı Ayarlı';
+}
+
+// Restore key indicator on load
+(function initKey() {
+  if (S.apiKey) {
+    document.getElementById('apiKeyToggle').className = 'apikey-toggle ok';
+    document.getElementById('apiKeyIcon').textContent = '✅';
+    document.getElementById('apiKeyLabel').textContent = 'API Anahtarı Ayarlı';
+  }
+})();
+
 function sD(d) { document.getElementById('di').value = d; goD(); }
 function goD() {
   const raw = document.getElementById('di').value;
@@ -772,7 +851,8 @@ async function regenPlan() {
 }
 
 function resetApp() {
-  S = { dest: '', days: 0, tickets: [], plan: null, places: [], selPlaces: [], style: '', mapQ: '' };
+  const savedKey = S.apiKey;
+  S = { dest: '', days: 0, tickets: [], plan: null, places: [], selPlaces: [], style: '', mapQ: '', apiKey: savedKey };
   document.getElementById('di').value = '';
   document.getElementById('tlist').innerHTML = '';
   document.getElementById('bnav').style.display = 'none';
