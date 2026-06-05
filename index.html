@@ -31,14 +31,10 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .wave:nth-child(2){background:rgba(14,165,233,.09);animation-duration:11s;animation-delay:-4s;bottom:7px}
 .wave:nth-child(3){background:rgba(14,165,233,.06);animation-duration:14s;animation-delay:-8s;bottom:14px}
 @keyframes waveM{0%{transform:translateX(0)}50%{transform:translateX(25%) scaleY(1.1)}100%{transform:translateX(50%)}}
-
-/* SCREENS */
 .screen{display:none;min-height:100vh;padding-bottom:100px}
 .screen.active{display:flex;flex-direction:column}
 #screen-welcome,#screen-days,#screen-style{align-items:center;justify-content:center;padding:36px 20px 110px;text-align:center}
 #screen-places,#screen-tickets,#screen-plan{padding:16px 20px 110px;max-width:860px;width:100%;margin:0 auto;align-items:stretch}
-
-/* WELCOME */
 .logo{font-family:'Pacifico',cursive;font-size:66px;color:var(--sea-deep);text-shadow:3px 3px 0 rgba(14,165,233,.18);margin-bottom:5px;animation:lFloat 3s ease-in-out infinite}
 @keyframes lFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .tagline{font-family:'Satisfy',cursive;font-size:20px;color:var(--sand-dark);margin-bottom:42px;opacity:.9}
@@ -54,8 +50,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .chip{padding:7px 15px;border-radius:22px;background:rgba(255,255,255,.8);border:2px solid rgba(14,165,233,.22);color:var(--sea-deep);font-weight:700;font-size:13px;cursor:pointer;transition:all .22s;backdrop-filter:blur(4px)}
 .chip:hover{background:var(--sea);color:#fff;border-color:var(--sea);transform:translateY(-2px);box-shadow:0 5px 16px rgba(14,165,233,.28)}
 .chip span{margin-right:4px}
-
-/* DAYS */
 .ddest{font-family:'Pacifico',cursive;font-size:36px;color:var(--sea);margin-bottom:32px}
 .dq{font-size:26px;font-weight:800;margin-bottom:7px}
 .dgrid{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:460px;margin:0 auto 28px}
@@ -67,8 +61,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .cdinput{width:84px;padding:11px;text-align:center;border-radius:14px;border:2px solid var(--sea-mid);font-size:19px;font-weight:800;font-family:'Nunito',sans-serif;outline:none;background:rgba(255,255,255,.85)}
 .nbtn{padding:14px 36px;border-radius:50px;background:linear-gradient(135deg,var(--sun),var(--coral));border:none;color:#fff;font-size:15px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .22s;box-shadow:0 7px 22px rgba(245,166,35,.32);letter-spacing:.3px}
 .nbtn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 28px rgba(245,166,35,.42)}
-
-/* PLACES */
 .back-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:11px;border:2px solid var(--sea-mid);background:rgba(255,255,255,.8);color:var(--sea-deep);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif;margin-bottom:14px;margin-top:8px}
 .back-btn:hover{background:var(--sea-light)}
 .breadcrumb{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);font-weight:600;margin-bottom:14px;flex-wrap:wrap}
@@ -77,7 +69,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .sec-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--sea);margin-bottom:3px}
 .sec-title{font-family:'Pacifico',cursive;font-size:26px;color:var(--text)}
 .sec-sub{font-size:13px;color:var(--muted);margin-top:3px;margin-bottom:18px}
-
 .pload{text-align:center;padding:56px 20px}
 .lplane{font-size:46px;animation:pFly 2s ease-in-out infinite}
 @keyframes pFly{0%,100%{transform:translateX(0) translateY(0) rotate(0deg)}25%{transform:translateX(14px) translateY(-9px) rotate(4deg)}75%{transform:translateX(-7px) translateY(-4px) rotate(-3deg)}}
@@ -86,7 +77,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .lbar{width:170px;height:4px;background:var(--sea-light);border-radius:4px;margin:16px auto 0;overflow:hidden}
 .lfill{height:100%;background:linear-gradient(90deg,var(--sea),var(--sun));border-radius:4px;animation:lFill 2s ease-in-out infinite}
 @keyframes lFill{0%{width:5%}60%{width:90%}100%{width:90%}}
-
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
 .pcard{background:rgba(255,255,255,.9);border-radius:16px;padding:15px;border:2px solid rgba(14,165,233,.14);cursor:pointer;transition:all .22s;position:relative;overflow:hidden}
 .pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sea-mid),var(--sun-mid));opacity:0;transition:opacity .2s}
@@ -99,16 +89,12 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .pname{font-size:14px;font-weight:800;color:var(--text);margin-bottom:2px;line-height:1.3}
 .ptype{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
 .pwhy{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
-
 .map-wrap{margin-bottom:20px}
 .map-label{font-size:13px;font-weight:700;color:var(--text);margin-bottom:9px;display:flex;align-items:center;gap:7px}
 .map-frame{width:100%;height:320px;border-radius:18px;overflow:hidden;border:2px solid rgba(14,165,233,.18);box-shadow:0 7px 28px rgba(14,165,233,.1);background:var(--sea-light)}
 .map-frame iframe{width:100%;height:100%;border:none}
-
 .cont-btn{width:100%;padding:15px;border-radius:14px;background:linear-gradient(135deg,var(--sea),var(--sea-deep));border:none;color:#fff;font-size:15px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;box-shadow:0 5px 18px rgba(14,165,233,.32)}
 .cont-btn:hover{transform:scale(1.02);box-shadow:0 9px 26px rgba(14,165,233,.42)}
-
-/* STYLE */
 .sq{font-size:24px;font-weight:800;margin-bottom:7px;line-height:1.3}
 .sdest{font-family:'Pacifico',cursive;font-size:32px;color:var(--sea);margin-bottom:10px}
 .ssub{font-size:14px;color:var(--muted);margin-bottom:32px}
@@ -120,8 +106,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .si-c{background:var(--purple-light)}.si-f{background:#FEF3C7}.si-v{background:var(--mint-light)}.si-r{background:#FFE8E8}
 .stitle{font-size:16px;font-weight:800;color:var(--text);margin-bottom:3px}
 .sdesc{font-size:13px;color:var(--muted);line-height:1.5}
-
-/* TICKETS */
 .stitle2{font-family:'Pacifico',cursive;font-size:30px;color:var(--sea-deep);margin-bottom:5px;text-align:center;margin-top:14px}
 .ssub2{font-size:13px;color:var(--muted);text-align:center;margin-bottom:24px}
 .ttabs{display:flex;gap:9px;margin-bottom:22px;justify-content:center}
@@ -149,8 +133,6 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .trm:hover{background:var(--coral);color:#fff}
 .skipbtn{display:block;text-align:center;width:100%;padding:12px;border-radius:50px;border:2.5px solid var(--sea-mid);background:transparent;color:var(--sea-deep);font-size:14px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;margin-top:7px}
 .skipbtn:hover{background:var(--sea-light)}
-
-/* PLAN */
 .pheader{background:rgba(255,255,255,.88);border-radius:18px;padding:18px 22px;margin-bottom:18px;backdrop-filter:blur(8px);border:1.5px solid rgba(14,165,233,.14);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px}
 .pdname{font-family:'Pacifico',cursive;font-size:26px;color:var(--sea-deep)}
 .pmeta{font-size:12px;color:var(--muted);font-weight:600;margin-top:2px}
@@ -196,13 +178,15 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
 .brow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed rgba(16,185,129,.2);font-size:13px}
 .brow:last-child{border-bottom:none;font-weight:800;font-size:15px;padding-top:9px}
 .blabel{color:var(--muted)}.bvalue{color:var(--text);font-weight:700}
-
-/* BOTTOM NAV */
 .bnav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-radius:26px;padding:8px 16px;display:flex;gap:3px;box-shadow:0 7px 32px rgba(14,165,233,.16);border:1px solid rgba(14,165,233,.14);z-index:100}
 .nitem{padding:8px 16px;border-radius:18px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;transition:all .2s;font-size:11px;font-weight:700;color:var(--muted);min-width:56px}
 .nitem.act{background:var(--sea);color:#fff}
 .nitem span:first-child{font-size:17px}
-
+.err-box{background:#FFF1F1;border:2px solid var(--coral);border-radius:16px;padding:20px;text-align:center;margin:16px 0}
+.err-box .err-ico{font-size:36px;margin-bottom:8px}
+.err-box .err-title{font-size:15px;font-weight:800;color:var(--coral);margin-bottom:5px}
+.err-box .err-msg{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.err-box button{padding:10px 24px;border-radius:22px;background:var(--coral);border:none;color:#fff;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px}
 @media(max-width:600px){
   .logo{font-size:48px}.pgrid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}
   .pgrid2{grid-template-columns:1fr}.pheader{flex-direction:column}.bnav{width:calc(100% - 24px)}
@@ -275,14 +259,12 @@ body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--text);o
   <div class="sec-eyebrow">Keşfet & Seç</div>
   <div class="sec-title" id="plTitle">Barselona'da Görülmesi Gereken Yerler</div>
   <div class="sec-sub">Listedeki yerlere göz atın, planınıza dahil etmek istediklerinizi seçin</div>
-
   <div id="plLoad" class="pload">
     <div class="lplane">🔍</div>
     <div class="ltitle">Yerler keşfediliyor...</div>
     <div class="lsub" id="plSub">En güzel noktalar bulunuyor</div>
     <div class="lbar"><div class="lfill"></div></div>
   </div>
-
   <div id="plContent" style="display:none">
     <div class="pgrid" id="plGrid"></div>
     <div class="map-wrap">
@@ -397,177 +379,404 @@ const TI={flight:'✈️',hotel:'🏨',train:'🚂',activity:'🎭',bus:'🚌'};
 const TL={flight:'Uçuş',hotel:'Otel',train:'Tren',activity:'Aktivite',bus:'Otobüs'};
 const SL={culture:'Kültürel Keşif',food:'Yiyip İçerken Gezi',vibe:'Kültür + Şehrin Ruhu',relax:'Dinlence & Keyif'};
 
-// CLOUDS
-(function(){[{w:120,h:40,t:'8%',s:60,d:0,o:.7},{w:80,h:28,t:'15%',s:90,d:-20,o:.5},{w:160,h:50,t:'5%',s:75,d:-35,o:.6},{w:70,h:22,t:'22%',s:110,d:-50,o:.45},{w:100,h:35,t:'12%',s:55,d:-15,o:.65}].forEach(c=>{const el=document.createElement('div');el.className='cloud';el.style.cssText=`width:${c.w}px;height:${c.h}px;top:${c.t};opacity:${c.o};animation-duration:${c.s}s;animation-delay:${c.d}s`;[`width:${c.w*.6}px;height:${c.h*1.4}px;border-radius:50%;top:-50%;left:20%;background:rgba(255,255,255,.8)`,`width:${c.w*.4}px;height:${c.h*1.2}px;border-radius:50%;top:-30%;left:50%;background:rgba(255,255,255,.75)`].forEach(s=>{const d=document.createElement('div');d.style.cssText='position:absolute;'+s;el.appendChild(d)});document.body.appendChild(el)})})();
+// ── CLOUDS ──────────────────────────────────────────────────────────────────
+(function(){[{w:120,h:40,t:'8%',s:60,d:0,o:.7},{w:80,h:28,t:'15%',s:90,d:-20,o:.5},{w:160,h:50,t:'5%',s:75,d:-35,o:.6},{w:70,h:22,t:'22%',s:110,d:-50,o:.45},{w:100,h:35,t:'12%',s:55,d:-15,o:.65}].forEach(c=>{const el=document.createElement('div');el.className='cloud';el.style.cssText=`width:${c.w}px;height:${c.h}px;top:${c.t};opacity:${c.o};animation-duration:${c.s}s;animation-delay:${c.d}s`;[`width:${c.w*.6}px;height:${c.h*1.4}px;border-radius:50%;top:-50%;left:20%`,`width:${c.w*.4}px;height:${c.h*1.2}px;border-radius:50%;top:-30%;left:50%`].forEach(s=>{const d=document.createElement('div');d.style.cssText='position:absolute;background:rgba(255,255,255,.8);'+s;el.appendChild(d)});document.body.appendChild(el)})})();
 
-function showS(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('screen-'+id).classList.add('active');document.documentElement.scrollTop=0;document.body.scrollTop=0}
+// ── CORE HELPERS ────────────────────────────────────────────────────────────
 
-// WELCOME
-function sD(d){document.getElementById('di').value=d;goD()}
-function goD(){
-  const raw=document.getElementById('di').value;
-  const d=raw.trim().replace(/(?:^|\s)\S/g,c=>c.toLocaleUpperCase('tr-TR'));
-  if(!d){const i=document.getElementById('di');i.style.borderColor='var(--coral)';i.placeholder='Lütfen destinasyon yazın!';setTimeout(()=>{i.style.borderColor='';i.placeholder='Örn: Barselona, Tokyo, Konya...'},2000);return}
-  S.dest=d;document.getElementById('ddn').textContent=d;showS('days');
+// Safe Anthropic API call — handles missing content, error objects, empty text
+async function callClaude(prompt, maxTokens) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: maxTokens || 1000,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  });
+
+  let data;
+  try { data = await res.json(); } catch(e) { throw new Error('Sunucudan geçersiz yanıt geldi'); }
+
+  // API-level error (e.g. auth, rate limit, bad request)
+  if (data.error) throw new Error('API hatası: ' + (data.error.message || JSON.stringify(data.error)));
+
+  // Extract text from all content blocks safely
+  const text = (data.content || [])
+    .map(b => (b.type === 'text' ? b.text : ''))
+    .filter(Boolean)
+    .join('');
+
+  if (!text) throw new Error('Yanıt boş geldi — lütfen tekrar deneyin');
+  return text;
 }
 
-// DAYS
-function selDay(n){document.querySelectorAll('.dbtn').forEach(b=>{b.classList.remove('sel');if(parseInt(b.textContent)===n)b.classList.add('sel')});S.days=n;document.getElementById('cd').value='';goPlaces()}
-function goPlaces(){const c=parseInt(document.getElementById('cd').value);if(c>0)S.days=c;if(!S.days){alert('Lütfen gün sayısı seçin');return}document.getElementById('plTitle').textContent=S.dest+"'da Görülmesi Gereken Yerler";showS('places');loadPlaces()}
-
-// PLACES
-async function loadPlaces(){
-  document.getElementById('plLoad').style.display='block';
-  document.getElementById('plContent').style.display='none';
-  const msgs=['En güzel noktalar bulunuyor...','Tarihi yerler araştırılıyor...','Yerel favoriler ekleniyor...'];
-  let mi=0;const iv=setInterval(()=>{document.getElementById('plSub').textContent=msgs[mi++%msgs.length]},1500);
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1600,messages:[{role:'user',content:`${S.dest} şehrinde mutlaka görülmesi gereken 10 önemli turistik yer listesi. SADECE JSON döndür, başka hiçbir şey yazma:\n{"places":[{"name":"Yer Adı","emoji":"🏛","type":"Kategori","why":"Neden özel - 1 kısa cümle","mapSearch":"Google Maps English search term"}],"mapQuery":"${S.dest} tourist attractions"}`}]})});
-    const data=await res.json();
-    const parsed=JSON.parse(data.content[0].text.match(/\{[\s\S]*\}/)[0]);
-    S.places=parsed.places||[];S.mapQ=parsed.mapQuery||S.dest+' tourist attractions';
-    clearInterval(iv);S.selPlaces=S.places.map((_,i)=>i);renderPlaces();
-  }catch(e){
-    clearInterval(iv);
-    S.places=[{name:S.dest+' Tarihi Merkez',emoji:'🏙',type:'Şehir Merkezi',why:'Şehrin kalbi ve kültürel odak noktası',mapSearch:S.dest+' historical center'},{name:'Ünlü Müze',emoji:'🎨',type:'Müze',why:'Bölgenin en önemli sanat ve tarih koleksiyonu',mapSearch:S.dest+' museum'},{name:'Yerel Pazar',emoji:'🛒',type:'Pazar',why:'Yerel ürünler ve renkli atmosfer',mapSearch:S.dest+' market'},{name:'Ana Meydan',emoji:'⛲',type:'Meydan',why:'Şehrin buluşma noktası',mapSearch:S.dest+' main square'},{name:'Tarihi Cami/Kilise',emoji:'🕌',type:'Dini Yapı',why:'Mimari ve kültürel önemi büyük',mapSearch:S.dest+' mosque church'},{name:'Park ve Bahçe',emoji:'🌿',type:'Doğa',why:'Şehrin yeşil nefes alanı',mapSearch:S.dest+' park garden'},{name:'Yemek Sokağı',emoji:'🍽',type:'Gastronomi',why:'En lezzetli yerel yemekler burada',mapSearch:S.dest+' food street'},{name:'Gece Hayatı',emoji:'🌙',type:'Eğlence',why:'Şehrin gece kültürünü keşfedin',mapSearch:S.dest+' nightlife'}];
-    S.mapQ=S.dest+' tourist attractions';S.selPlaces=S.places.map((_,i)=>i);renderPlaces();
+// Safe JSON extraction — finds first { ... last } without regex
+function parseJSON(text) {
+  const s = text.indexOf('{');
+  const e = text.lastIndexOf('}');
+  if (s < 0 || e < 0 || e <= s) throw new Error('Yanıtta geçerli JSON bulunamadı');
+  try {
+    return JSON.parse(text.slice(s, e + 1));
+  } catch (err) {
+    throw new Error('JSON ayrıştırma hatası: ' + err.message);
   }
 }
 
-function renderPlaces(){
-  document.getElementById('plLoad').style.display='none';
-  document.getElementById('plContent').style.display='block';
-  document.getElementById('plGrid').innerHTML=S.places.map((p,i)=>`<div class="pcard${S.selPlaces.includes(i)?' sel':''}" id="pc-${i}" onclick="togP(${i})"><div class="pcheck">${S.selPlaces.includes(i)?'✓':''}</div><div class="pemoji">${p.emoji}</div><div class="pname">${p.name}</div><div class="ptype">${p.type}</div><div class="pwhy">${p.why}</div></div>`).join('');
+// ── NAVIGATION ──────────────────────────────────────────────────────────────
+function showS(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+// ── WELCOME ──────────────────────────────────────────────────────────────────
+function sD(d) { document.getElementById('di').value = d; goD(); }
+function goD() {
+  const raw = document.getElementById('di').value;
+  const d = raw.trim().replace(/(?:^|\s)\S/g, c => c.toLocaleUpperCase('tr-TR'));
+  if (!d) {
+    const i = document.getElementById('di');
+    i.style.borderColor = 'var(--coral)';
+    i.placeholder = 'Lütfen destinasyon yazın!';
+    setTimeout(() => { i.style.borderColor = ''; i.placeholder = 'Örn: Barselona, Tokyo, Konya...'; }, 2000);
+    return;
+  }
+  S.dest = d;
+  document.getElementById('ddn').textContent = d;
+  showS('days');
+}
+
+// ── DAYS ─────────────────────────────────────────────────────────────────────
+function selDay(n) {
+  document.querySelectorAll('.dbtn').forEach(b => {
+    b.classList.remove('sel');
+    if (parseInt(b.textContent) === n) b.classList.add('sel');
+  });
+  S.days = n;
+  document.getElementById('cd').value = '';
+  goPlaces();
+}
+function goPlaces() {
+  const c = parseInt(document.getElementById('cd').value);
+  if (c > 0) S.days = c;
+  if (!S.days) { alert('Lütfen gün sayısı seçin'); return; }
+  document.getElementById('plTitle').textContent = S.dest + "'da Görülmesi Gereken Yerler";
+  showS('places');
+  loadPlaces();
+}
+
+// ── PLACES ───────────────────────────────────────────────────────────────────
+const FALLBACK_PLACES = (dest) => [
+  {name: dest + ' Tarihi Merkez', emoji: '🏙', type: 'Şehir Merkezi', why: 'Şehrin kalbi ve kültürel odak noktası', mapSearch: dest + ' historical center'},
+  {name: 'Ulusal Müze', emoji: '🎨', type: 'Müze', why: 'Bölgenin en önemli sanat ve tarih koleksiyonu', mapSearch: dest + ' national museum'},
+  {name: 'Yerel Pazar', emoji: '🛒', type: 'Pazar', why: 'Yerel ürünler ve renkli atmosfer', mapSearch: dest + ' market'},
+  {name: 'Ana Meydan', emoji: '⛲', type: 'Meydan', why: 'Şehrin buluşma noktası', mapSearch: dest + ' main square'},
+  {name: 'Tarihi Yapı', emoji: '🕌', type: 'Tarihi Alan', why: 'Mimari ve kültürel önemi büyük', mapSearch: dest + ' historic building'},
+  {name: 'Şehir Parkı', emoji: '🌿', type: 'Doğa', why: 'Şehrin yeşil nefes alanı', mapSearch: dest + ' city park'},
+  {name: 'Yemek Sokağı', emoji: '🍽', type: 'Gastronomi', why: 'En lezzetli yerel yemekler burada', mapSearch: dest + ' food street'},
+  {name: 'Gece Hayatı', emoji: '🌙', type: 'Eğlence', why: 'Şehrin gece kültürünü keşfedin', mapSearch: dest + ' nightlife'}
+];
+
+async function loadPlaces() {
+  document.getElementById('plLoad').style.display = 'block';
+  document.getElementById('plContent').style.display = 'none';
+  const msgs = ['En güzel noktalar bulunuyor...', 'Tarihi yerler araştırılıyor...', 'Yerel favoriler ekleniyor...'];
+  let mi = 0;
+  const iv = setInterval(() => { document.getElementById('plSub').textContent = msgs[mi++ % msgs.length]; }, 1500);
+
+  try {
+    const text = await callClaude(
+      `${S.dest} şehrinde mutlaka görülmesi gereken 10 turistik yer. Yanıt olarak SADECE JSON döndür, başka hiçbir şey yazma:\n{"places":[{"name":"Yer Adı","emoji":"🏛","type":"Kategori","why":"Neden özel - 1 kısa cümle","mapSearch":"Google Maps English search term"}],"mapQuery":"${S.dest} tourist attractions"}`,
+      1600
+    );
+    const parsed = parseJSON(text);
+    S.places = (parsed.places || []).filter(p => p && p.name);
+    S.mapQ = parsed.mapQuery || S.dest + ' tourist attractions';
+    if (S.places.length === 0) throw new Error('Yer listesi boş geldi');
+    clearInterval(iv);
+    S.selPlaces = S.places.map((_, i) => i);
+    renderPlaces();
+  } catch (e) {
+    clearInterval(iv);
+    console.warn('Yerler API hatası, yedek liste kullanılıyor:', e.message);
+    S.places = FALLBACK_PLACES(S.dest);
+    S.mapQ = S.dest + ' tourist attractions';
+    S.selPlaces = S.places.map((_, i) => i);
+    renderPlaces();
+  }
+}
+
+function renderPlaces() {
+  document.getElementById('plLoad').style.display = 'none';
+  document.getElementById('plContent').style.display = 'block';
+  document.getElementById('plGrid').innerHTML = S.places.map((p, i) =>
+    `<div class="pcard${S.selPlaces.includes(i) ? ' sel' : ''}" id="pc-${i}" onclick="togP(${i})">
+      <div class="pcheck">${S.selPlaces.includes(i) ? '✓' : ''}</div>
+      <div class="pemoji">${p.emoji || '📍'}</div>
+      <div class="pname">${p.name}</div>
+      <div class="ptype">${p.type || ''}</div>
+      <div class="pwhy">${p.why || ''}</div>
+    </div>`
+  ).join('');
   updMap();
 }
-function togP(i){const idx=S.selPlaces.indexOf(i);if(idx>-1)S.selPlaces.splice(idx,1);else S.selPlaces.push(i);const c=document.getElementById('pc-'+i);c.classList.toggle('sel');c.querySelector('.pcheck').textContent=S.selPlaces.includes(i)?'✓':'';updMap()}
-function updMap(){
-  const sel=S.selPlaces.map(i=>S.places[i]);
-  const q=sel.length>0?(sel[0].mapSearch||sel[0].name):S.mapQ;
-  document.getElementById('mapIframe').src=`https://maps.google.com/maps?q=${encodeURIComponent(q)}&output=embed&z=14`;
+
+function togP(i) {
+  const idx = S.selPlaces.indexOf(i);
+  if (idx > -1) S.selPlaces.splice(idx, 1); else S.selPlaces.push(i);
+  const c = document.getElementById('pc-' + i);
+  c.classList.toggle('sel');
+  c.querySelector('.pcheck').textContent = S.selPlaces.includes(i) ? '✓' : '';
+  updMap();
 }
-function goStyle(){if(S.selPlaces.length===0){alert('En az bir yer seçin');return}document.getElementById('styleDest').textContent=S.dest;showS('style')}
 
-// STYLE
-function selStyle(style,el){S.style=style;document.querySelectorAll('.scard').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');setTimeout(()=>showS('tickets'),300)}
+function updMap() {
+  const sel = S.selPlaces.map(i => S.places[i]).filter(Boolean);
+  const q = sel.length > 0 ? (sel[0].mapSearch || sel[0].name) : S.mapQ;
+  document.getElementById('mapIframe').src = `https://maps.google.com/maps?q=${encodeURIComponent(q)}&output=embed&z=14`;
+}
 
-// TICKETS
-function swTab(id){document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('act'));document.querySelectorAll('.tpanel').forEach(p=>p.classList.remove('act'));document.getElementById('tab-'+id).classList.add('act');document.getElementById('panel-'+id).classList.add('act')}
-function addT(){const type=document.getElementById('tt').value,title=document.getElementById('ttl2').value.trim();if(!title){alert('Başlık girin');return}S.tickets.push({id:Date.now(),type,title,date:document.getElementById('td').value,time:document.getElementById('th').value,note:document.getElementById('tn').value.trim()});rTickets();document.getElementById('ttl2').value='';document.getElementById('tn').value=''}
-function fUp(e){const f=e.target.files[0];if(!f)return;S.tickets.push({id:Date.now(),type:'flight',title:f.name.replace(/\.[^/.]+$/,''),date:'',time:'',note:'Dosya: '+f.name});rTickets();const z=document.getElementById('uzone');z.innerHTML='<div class="uico">✅</div><div class="utitle">'+f.name+' yüklendi!</div>';setTimeout(()=>{z.innerHTML='<div class="uico">📄</div><div class="utitle">Biletinizi buraya sürükleyin</div><div class="uhint">PDF, resim veya metin dosyası</div>'},2000)}
-function fDrop(e){e.preventDefault();document.getElementById('uzone').classList.remove('dov');const f=e.dataTransfer.files[0];if(f)fUp({target:{files:[f]}})}
-function rmT(id){S.tickets=S.tickets.filter(t=>t.id!==id);rTickets()}
-function rTickets(){document.getElementById('tlist').innerHTML=S.tickets.map(t=>`<div class="tcard"><div class="tico">${TI[t.type]||'🎫'}</div><div class="tinfo"><div class="ttl">${t.title}</div><div class="tmeta">${TL[t.type]||'Bilet'}${t.date?' • '+new Date(t.date).toLocaleDateString('tr-TR',{day:'numeric',month:'long'}):''}${t.time?' • '+t.time:''}${t.note?' • '+t.note:''}</div></div><button class="trm" onclick="rmT(${t.id})">✕</button></div>`).join('')}
-function fmtD(d){if(!d)return'';return new Date(d).toLocaleDateString('tr-TR',{day:'numeric',month:'long'})}
+function goStyle() {
+  if (S.selPlaces.length === 0) { alert('En az bir yer seçin'); return; }
+  document.getElementById('styleDest').textContent = S.dest;
+  showS('style');
+}
 
-// PLAN
-const LM=['Rotanız çiziliyor...','Seçtiğiniz yerler ekleniyor...','Seyahat tarzınıza göre ayarlanıyor...','Restoranlar ve saatler düzenleniyor...','Son rötuşlar yapılıyor...'];
-async function goPlan(){
+// ── STYLE ────────────────────────────────────────────────────────────────────
+function selStyle(style, el) {
+  S.style = style;
+  document.querySelectorAll('.scard').forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  setTimeout(() => showS('tickets'), 300);
+}
+
+// ── TICKETS ──────────────────────────────────────────────────────────────────
+function swTab(id) {
+  document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('act'));
+  document.querySelectorAll('.tpanel').forEach(p => p.classList.remove('act'));
+  document.getElementById('tab-' + id).classList.add('act');
+  document.getElementById('panel-' + id).classList.add('act');
+}
+
+function addT() {
+  const type = document.getElementById('tt').value, title = document.getElementById('ttl2').value.trim();
+  if (!title) { alert('Başlık girin'); return; }
+  S.tickets.push({ id: Date.now(), type, title, date: document.getElementById('td').value, time: document.getElementById('th').value, note: document.getElementById('tn').value.trim() });
+  rTickets();
+  document.getElementById('ttl2').value = '';
+  document.getElementById('tn').value = '';
+}
+
+function fUp(e) {
+  const f = e.target.files[0]; if (!f) return;
+  S.tickets.push({ id: Date.now(), type: 'flight', title: f.name.replace(/\.[^/.]+$/, ''), date: '', time: '', note: 'Dosya: ' + f.name });
+  rTickets();
+  const z = document.getElementById('uzone');
+  z.innerHTML = '<div class="uico">✅</div><div class="utitle">' + f.name + ' yüklendi!</div>';
+  setTimeout(() => { z.innerHTML = '<div class="uico">📄</div><div class="utitle">Biletinizi buraya sürükleyin</div><div class="uhint">PDF, resim veya metin dosyası</div>'; }, 2000);
+}
+
+function fDrop(e) { e.preventDefault(); document.getElementById('uzone').classList.remove('dov'); const f = e.dataTransfer.files[0]; if (f) fUp({ target: { files: [f] } }); }
+function rmT(id) { S.tickets = S.tickets.filter(t => t.id !== id); rTickets(); }
+
+function rTickets() {
+  document.getElementById('tlist').innerHTML = S.tickets.map(t =>
+    `<div class="tcard">
+      <div class="tico">${TI[t.type] || '🎫'}</div>
+      <div class="tinfo">
+        <div class="ttl">${t.title}</div>
+        <div class="tmeta">${TL[t.type] || 'Bilet'}${t.date ? ' • ' + new Date(t.date).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }) : ''}${t.time ? ' • ' + t.time : ''}${t.note ? ' • ' + t.note : ''}</div>
+      </div>
+      <button class="trm" onclick="rmT(${t.id})">✕</button>
+    </div>`
+  ).join('');
+}
+
+function fmtD(d) { if (!d) return ''; return new Date(d).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }); }
+
+// ── PLAN ─────────────────────────────────────────────────────────────────────
+const LM = ['Rotanız çiziliyor...', 'Seçtiğiniz yerler ekleniyor...', 'Seyahat tarzınıza göre ayarlanıyor...', 'Restoranlar ve saatler düzenleniyor...', 'Son rötuşlar yapılıyor...'];
+
+async function goPlan() {
   showS('plan');
-  document.getElementById('pdname').textContent=S.dest;
-  document.getElementById('pmeta').textContent=`${S.days} Gün • ${SL[S.style]||''} • ${S.tickets.length} Bilet`;
-  document.getElementById('bnav').style.display='flex';
-  document.getElementById('ploading').style.display='block';
-  document.getElementById('pcontent').style.display='none';
-  let mi=0;const iv=setInterval(()=>{document.getElementById('lsub').textContent=LM[mi++%LM.length]},1700);
-  try{const plan=await genPlan();clearInterval(iv);S.plan=plan;renderPlan(plan)}
-  catch(e){clearInterval(iv);console.error(e);fallbackPlan()}
+  document.getElementById('pdname').textContent = S.dest;
+  document.getElementById('pmeta').textContent = `${S.days} Gün • ${SL[S.style] || ''} • ${S.tickets.length} Bilet`;
+  document.getElementById('bnav').style.display = 'flex';
+  document.getElementById('ploading').style.display = 'block';
+  document.getElementById('pcontent').style.display = 'none';
+  let mi = 0;
+  const iv = setInterval(() => { document.getElementById('lsub').textContent = LM[mi++ % LM.length]; }, 1700);
+  try {
+    const plan = await genPlan();
+    clearInterval(iv);
+    S.plan = plan;
+    renderPlan(plan);
+  } catch (e) {
+    clearInterval(iv);
+    console.error('Plan oluşturma hatası:', e);
+    showPlanError(e.message);
+  }
 }
 
-async function genPlan(){
-  const selP=S.selPlaces.map(i=>S.places[i]?.name).filter(Boolean).join(', ');
-  const tCtx=S.tickets.length?'\nBiletler:\n'+S.tickets.map(t=>`- ${TL[t.type]}: ${t.title}${t.date?' ('+t.date+')':''}${t.time?' '+t.time:''}`).join('\n'):'';
-  const styleCtx={culture:'Kültüre odaklan, müze tarihi alan ağırlıklı',food:'Yeme içme yerel lezzetler ağırlıklı',vibe:'Hem kültür hem yerel yaşam ve insan hikayeleri',relax:'Yavaş tempo kafelerde oturma sahil parklar'}[S.style]||'';
-  const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:5000,messages:[{role:'user',content:`Türkçe yanıt ver. Seyahat planı oluştur.
-Destinasyon: ${S.dest}
-Süre: ${S.days} gün
-Seyahat tarzı: ${styleCtx}
-Mutlaka dahil edilecek yerler: ${selP}${tCtx}
+async function genPlan() {
+  const selP = S.selPlaces.map(i => S.places[i]?.name).filter(Boolean).join(', ');
+  const tCtx = S.tickets.length
+    ? '\nBiletler: ' + S.tickets.map(t => `${TL[t.type]}: ${t.title}${t.date ? ' (' + t.date + ')' : ''}${t.time ? ' ' + t.time : ''}`).join('; ')
+    : '';
+  const styleCtx = { culture: 'Kültür ve tarih odaklı', food: 'Yemek ve gastronomi odaklı', vibe: 'Kültür ve yerel yaşam dengeli', relax: 'Yavaş tempolu ve rahat' }[S.style] || 'Dengeli';
 
-SADECE JSON döndür:
-{"days":[{"day":1,"title":"Günün teması","items":[{"time":"09:00","title":"Yer adı","description":"Açıklama","tags":["culture"],"duration":"2 saat","mapSearch":"English search term"}],"tip":"Günün ipucu","mapQuery":"English map search for this day"}],"packingList":["eşya"],"budgetEstimate":{"accommodation":"fiyat","food":"fiyat","transport":"fiyat","activities":"fiyat","total":"toplam"},"generalTips":["ipucu"]}
+  const text = await callClaude(
+    `${S.dest} için ${S.days} günlük Türkçe seyahat planı oluştur. Tarz: ${styleCtx}. Mutlaka dahil et: ${selP}.${tCtx}
 
-Tags: food,culture,beach,hotel,transport,activity,night
-Her güne 6-8 aktivite. Seçilen yerleri mutlaka dahil et.`}]})});
-  const data=await res.json();
-  return JSON.parse(data.content[0].text.match(/\{[\s\S]*\}/)[0]);
+SADECE geçerli JSON döndür, başka hiçbir şey yazma:
+{"days":[{"day":1,"title":"Günün kısa teması","items":[{"time":"09:00","title":"Yer adı","description":"2-3 cümle açıklama","tags":["culture"],"duration":"2 saat","mapSearch":"English search term"}],"tip":"Günün pratik ipucu","mapQuery":"city area English"}],"packingList":["pasaport","güneş kremi","şarj aleti"],"budgetEstimate":{"accommodation":"50-100€/gece","food":"20-40€/gün","transport":"10-15€/gün","activities":"20€/gün","total":"Toplam tahmini"},"generalTips":["Genel ipucu 1","Genel ipucu 2"]}
+
+Kurallar: Her gün 5-6 aktivite. Seçilen yerleri mutlaka ekle. Kısa ve öz açıklamalar. tags değerleri: food, culture, beach, hotel, transport, activity, night`,
+    5000
+  );
+
+  const plan = parseJSON(text);
+
+  // Minimal validation
+  if (!plan.days || !Array.isArray(plan.days) || plan.days.length === 0) {
+    throw new Error('Plan verisi geçersiz — günler listesi boş');
+  }
+  return plan;
 }
 
-function tagL(t){return{food:'🍽 Yemek',culture:'🏛 Kültür',beach:'🏖 Plaj',hotel:'🏨 Otel',transport:'🚌 Ulaşım',activity:'🎯 Aktivite',night:'🌙 Gece'}[t]||t}
+function tagL(t) {
+  return { food: '🍽 Yemek', culture: '🏛 Kültür', beach: '🏖 Plaj', hotel: '🏨 Otel', transport: '🚌 Ulaşım', activity: '🎯 Aktivite', night: '🌙 Gece' }[t] || t;
+}
 
-function renderPlan(plan){
-  document.getElementById('ploading').style.display='none';
-  document.getElementById('pcontent').style.display='block';
-  const tabsEl=document.getElementById('dtabs'),plansEl=document.getElementById('dplans');
-  tabsEl.innerHTML='';plansEl.innerHTML='';
-  plan.days.forEach((day,di)=>{
-    tabsEl.innerHTML+=`<button class="dtab${di===0?' act':''}" onclick="swDay(${day.day})" id="tab-${day.day}">Gün ${day.day}</button>`;
-    const div=document.createElement('div');
-    div.className='dplan'+(di===0?' act':'');
-    div.id='day-'+day.day;
-    const tB=S.tickets.length&&di===0?S.tickets.slice(0,2).map(t=>`<div style="background:linear-gradient(135deg,var(--sea-light),var(--sun-light));border:2px solid var(--sea-mid);border-radius:12px;padding:11px 15px;margin-bottom:10px;display:flex;align-items:center;gap:11px"><span style="font-size:21px">${TI[t.type]||'🎫'}</span><div><div style="font-weight:800;font-size:13px">${t.title}</div><div style="font-size:11px;color:var(--muted)">${TL[t.type]}${t.date?' • '+fmtD(t.date):''}${t.time?' • '+t.time:''}</div></div></div>`).join(''):'';
-    const mapQ=day.mapQuery||(day.items&&day.items[0]?.mapSearch)||S.dest;
-    div.innerHTML=tB+`<div class="dcard"><div class="dcardtitle">📅 Gün ${day.day} — ${day.title||''}</div>
-      <div class="timeline">${day.items.map((it,ii)=>`<div class="titem" style="animation-delay:${ii*.07}s"><div class="tdot"></div><div class="ttime">${it.time||''}</div><div class="ttitlei">${it.title}</div><div class="tdesc">${it.description}</div><div class="ttags">${(it.tags||[]).map(tg=>`<span class="ttag tag-${tg}">${tagL(tg)}</span>`).join('')}${it.duration?`<span class="ttag" style="background:#F1F5F9;color:#64748B">⏱ ${it.duration}</span>`:''}</div></div>`).join('')}</div></div>
-      ${day.tip?`<div class="tips-box"><div class="tips-box-title">💡 Günün İpucu</div><div class="tipitem">${day.tip}</div></div>`:''}
-      <div class="map-in-plan"><div class="map-in-plan-title">📍 Bugünün Haritası</div><div class="map-frame" style="height:200px"><iframe src="https://maps.google.com/maps?q=${encodeURIComponent(mapQ)}&output=embed&z=14" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none"></iframe></div></div>`;
+function renderPlan(plan) {
+  document.getElementById('ploading').style.display = 'none';
+  document.getElementById('pcontent').style.display = 'block';
+  const tabsEl = document.getElementById('dtabs'), plansEl = document.getElementById('dplans');
+  tabsEl.innerHTML = ''; plansEl.innerHTML = '';
+
+  plan.days.forEach((day, di) => {
+    tabsEl.innerHTML += `<button class="dtab${di === 0 ? ' act' : ''}" onclick="swDay(${day.day})" id="tab-${day.day}">Gün ${day.day}</button>`;
+    const div = document.createElement('div');
+    div.className = 'dplan' + (di === 0 ? ' act' : '');
+    div.id = 'day-' + day.day;
+
+    const tB = S.tickets.length && di === 0
+      ? S.tickets.slice(0, 2).map(t =>
+          `<div style="background:linear-gradient(135deg,var(--sea-light),var(--sun-light));border:2px solid var(--sea-mid);border-radius:12px;padding:11px 15px;margin-bottom:10px;display:flex;align-items:center;gap:11px">
+            <span style="font-size:21px">${TI[t.type] || '🎫'}</span>
+            <div><div style="font-weight:800;font-size:13px">${t.title}</div>
+            <div style="font-size:11px;color:var(--muted)">${TL[t.type]}${t.date ? ' • ' + fmtD(t.date) : ''}${t.time ? ' • ' + t.time : ''}</div></div>
+          </div>`
+        ).join('')
+      : '';
+
+    const mapQ = day.mapQuery || (day.items && day.items[0]?.mapSearch) || S.dest;
+    const items = (day.items || []).map((it, ii) =>
+      `<div class="titem" style="animation-delay:${ii * .07}s">
+        <div class="tdot"></div>
+        <div class="ttime">${it.time || ''}</div>
+        <div class="ttitlei">${it.title || ''}</div>
+        <div class="tdesc">${it.description || ''}</div>
+        <div class="ttags">
+          ${(it.tags || []).map(tg => `<span class="ttag tag-${tg}">${tagL(tg)}</span>`).join('')}
+          ${it.duration ? `<span class="ttag" style="background:#F1F5F9;color:#64748B">⏱ ${it.duration}</span>` : ''}
+        </div>
+      </div>`
+    ).join('');
+
+    div.innerHTML = tB +
+      `<div class="dcard">
+        <div class="dcardtitle">📅 Gün ${day.day} — ${day.title || ''}</div>
+        <div class="timeline">${items}</div>
+       </div>
+       ${day.tip ? `<div class="tips-box"><div class="tips-box-title">💡 Günün İpucu</div><div class="tipitem">${day.tip}</div></div>` : ''}
+       <div class="map-in-plan">
+         <div class="map-in-plan-title">📍 Bugünün Haritası</div>
+         <div class="map-frame" style="height:200px">
+           <iframe src="https://maps.google.com/maps?q=${encodeURIComponent(mapQ)}&output=embed&z=14" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none"></iframe>
+         </div>
+       </div>`;
     plansEl.appendChild(div);
   });
-  S.packingList=plan.packingList||[];S.budgetEstimate=plan.budgetEstimate||{};S.generalTips=plan.generalTips||[];
+
+  S.packingList = plan.packingList || [];
+  S.budgetEstimate = plan.budgetEstimate || {};
+  S.generalTips = plan.generalTips || [];
 }
 
-function swDay(n){
-  document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('act'));
-  document.querySelectorAll('.dplan').forEach(p=>p.classList.remove('act'));
-  document.getElementById('tab-'+n)?.classList.add('act');
-  document.getElementById('day-'+n)?.classList.add('act');
+function showPlanError(msg) {
+  document.getElementById('ploading').style.display = 'none';
+  document.getElementById('pcontent').style.display = 'block';
+  document.getElementById('dtabs').innerHTML = '';
+  document.getElementById('dplans').innerHTML = `
+    <div class="err-box">
+      <div class="err-ico">😕</div>
+      <div class="err-title">Plan oluşturulamadı</div>
+      <div class="err-msg">${msg || 'Beklenmedik bir hata oluştu.'}<br><br>Lütfen tekrar deneyin.</div>
+      <button onclick="regenPlan()">🔄 Tekrar Dene</button>
+    </div>`;
+  S.packingList = []; S.budgetEstimate = {}; S.generalTips = [];
 }
 
-function swPlan(tab){
-  document.querySelectorAll('.nitem').forEach(n=>n.classList.remove('act'));
+function swDay(n) {
+  document.querySelectorAll('.dtab').forEach(t => t.classList.remove('act'));
+  document.querySelectorAll('.dplan').forEach(p => p.classList.remove('act'));
+  document.getElementById('tab-' + n)?.classList.add('act');
+  document.getElementById('day-' + n)?.classList.add('act');
+}
+
+function swPlan(tab) {
+  document.querySelectorAll('.nitem').forEach(n => n.classList.remove('act'));
   document.getElementById('extra')?.remove();
-  document.getElementById('dtabs').style.display='flex';
-  document.querySelectorAll('.dplan').forEach(p=>p.style.display='');
-  if(tab==='plan'){document.getElementById('nav-plan').classList.add('act');return}
-  document.getElementById('dtabs').style.display='none';
-  document.querySelectorAll('.dplan').forEach(p=>p.style.display='none');
-  document.getElementById('nav-'+tab)?.classList.add('act');
-  const ex=document.createElement('div');ex.id='extra';
-  const pc=document.getElementById('pcontent');
-  if(tab==='harita'){
-    const selN=S.selPlaces.map(i=>S.places[i]?.name).filter(Boolean).join(' ');
-    const q=encodeURIComponent((selN||S.dest)+' attractions');
-    ex.innerHTML=`<div class="dcard"><div class="dcardtitle">📍 Tüm Seçili Noktalar</div><div class="map-frame" style="height:400px"><iframe src="https://maps.google.com/maps?q=${q}&output=embed&z=13" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none"></iframe></div></div>`;
+  document.getElementById('dtabs').style.display = 'flex';
+  document.querySelectorAll('.dplan').forEach(p => p.style.display = '');
+
+  if (tab === 'plan') { document.getElementById('nav-plan').classList.add('act'); return; }
+
+  document.getElementById('dtabs').style.display = 'none';
+  document.querySelectorAll('.dplan').forEach(p => p.style.display = 'none');
+  document.getElementById('nav-' + tab)?.classList.add('act');
+
+  const ex = document.createElement('div'); ex.id = 'extra';
+  const pc = document.getElementById('pcontent');
+
+  if (tab === 'harita') {
+    const selN = S.selPlaces.map(i => S.places[i]?.name).filter(Boolean).join(' ');
+    const q = encodeURIComponent((selN || S.dest) + ' attractions');
+    ex.innerHTML = `<div class="dcard"><div class="dcardtitle">📍 Tüm Seçili Noktalar</div><div class="map-frame" style="height:400px"><iframe src="https://maps.google.com/maps?q=${q}&output=embed&z=13" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none"></iframe></div></div>`;
   }
-  if(tab==='bilet'){ex.innerHTML=`<div class="dcard"><div class="dcardtitle">🎟️ Biletlerim</div>${S.tickets.length===0?'<div style="text-align:center;padding:24px;color:var(--muted)">Henüz bilet eklenmedi.</div>':S.tickets.map(t=>`<div class="tcard" style="margin-bottom:7px"><div class="tico">${TI[t.type]||'🎫'}</div><div class="tinfo"><div class="ttl">${t.title}</div><div class="tmeta">${TL[t.type]}${t.date?' • '+fmtD(t.date):''}${t.time?' • '+t.time:''}${t.note?' • '+t.note:''}</div></div></div>`).join('')}</div>`}
-  if(tab==='bavul'){const items=S.packingList.length?S.packingList:['Pasaport','Uçak bileti','Güneş kremi','Şarj aleti','Kamera','Adaptör','İlaç çantası','Yürüyüş ayakkabısı','Hafif ceket','Su şişesi','Nakit para','Sigorta belgesi'];ex.innerHTML=`<div class="packing-box"><div class="dcardtitle">🧳 Bavul Listesi</div><div class="pgrid2">${items.map((it,i)=>`<div class="pitem" id="pi-${i}" onclick="this.classList.toggle('ck')">${it}</div>`).join('')}</div></div>`}
-  if(tab==='butce'){const b=S.budgetEstimate||{};ex.innerHTML=`<div class="budget-box"><div class="dcardtitle">💰 Tahmini Bütçe</div><div class="brow"><span class="blabel">🏨 Konaklama (gecelik)</span><span class="bvalue">${b.accommodation||'—'}</span></div><div class="brow"><span class="blabel">🍽 Yemek (günlük)</span><span class="bvalue">${b.food||'—'}</span></div><div class="brow"><span class="blabel">🚌 Ulaşım (günlük)</span><span class="bvalue">${b.transport||'—'}</span></div><div class="brow"><span class="blabel">🎭 Aktiviteler (günlük)</span><span class="bvalue">${b.activities||'—'}</span></div><div class="brow"><span class="blabel">🌍 ${S.days} Gün Toplam</span><span class="bvalue" style="color:var(--sea)">${b.total||'—'}</span></div></div>${S.generalTips?.length?`<div class="tips-box" style="margin-top:10px"><div class="tips-box-title">🌴 Genel İpuçları</div>${S.generalTips.map(t=>`<div class="tipitem">${t}</div>`).join('')}</div>`:''}`}
+  if (tab === 'bilet') {
+    ex.innerHTML = `<div class="dcard"><div class="dcardtitle">🎟️ Biletlerim</div>${S.tickets.length === 0 ? '<div style="text-align:center;padding:24px;color:var(--muted)">Henüz bilet eklenmedi.</div>' : S.tickets.map(t => `<div class="tcard" style="margin-bottom:7px"><div class="tico">${TI[t.type] || '🎫'}</div><div class="tinfo"><div class="ttl">${t.title}</div><div class="tmeta">${TL[t.type]}${t.date ? ' • ' + fmtD(t.date) : ''}${t.time ? ' • ' + t.time : ''}${t.note ? ' • ' + t.note : ''}</div></div></div>`).join('')}</div>`;
+  }
+  if (tab === 'bavul') {
+    const items = S.packingList.length ? S.packingList : ['Pasaport', 'Uçak bileti', 'Güneş kremi', 'Şarj aleti', 'Kamera', 'Adaptör', 'İlaç çantası', 'Yürüyüş ayakkabısı', 'Hafif ceket', 'Su şişesi', 'Nakit para', 'Sigorta belgesi'];
+    ex.innerHTML = `<div class="packing-box"><div class="dcardtitle">🧳 Bavul Listesi</div><div class="pgrid2">${items.map((it, i) => `<div class="pitem" id="pi-${i}" onclick="this.classList.toggle('ck')">${it}</div>`).join('')}</div></div>`;
+  }
+  if (tab === 'butce') {
+    const b = S.budgetEstimate || {};
+    ex.innerHTML = `<div class="budget-box"><div class="dcardtitle">💰 Tahmini Bütçe</div><div class="brow"><span class="blabel">🏨 Konaklama (gecelik)</span><span class="bvalue">${b.accommodation || '—'}</span></div><div class="brow"><span class="blabel">🍽 Yemek (günlük)</span><span class="bvalue">${b.food || '—'}</span></div><div class="brow"><span class="blabel">🚌 Ulaşım (günlük)</span><span class="bvalue">${b.transport || '—'}</span></div><div class="brow"><span class="blabel">🎭 Aktiviteler (günlük)</span><span class="bvalue">${b.activities || '—'}</span></div><div class="brow"><span class="blabel">🌍 ${S.days} Gün Toplam</span><span class="bvalue" style="color:var(--sea)">${b.total || '—'}</span></div></div>${S.generalTips?.length ? `<div class="tips-box" style="margin-top:10px"><div class="tips-box-title">🌴 Genel İpuçları</div>${S.generalTips.map(t => `<div class="tipitem">${t}</div>`).join('')}</div>` : ''}`;
+  }
   pc.appendChild(ex);
 }
 
-async function regenPlan(){
+async function regenPlan() {
   document.getElementById('extra')?.remove();
-  document.getElementById('dtabs').style.display='flex';
-  document.querySelectorAll('.dplan').forEach(p=>p.style.display='');
-  document.querySelectorAll('.nitem').forEach(n=>n.classList.remove('act'));
+  document.getElementById('dtabs').style.display = 'flex';
+  document.querySelectorAll('.dplan').forEach(p => p.style.display = '');
+  document.querySelectorAll('.nitem').forEach(n => n.classList.remove('act'));
   document.getElementById('nav-plan').classList.add('act');
   await goPlan();
 }
 
-function resetApp(){
-  S={dest:'',days:0,tickets:[],plan:null,places:[],selPlaces:[],style:'',mapQ:''};
-  document.getElementById('di').value='';
-  document.getElementById('tlist').innerHTML='';
-  document.getElementById('bnav').style.display='none';
+function resetApp() {
+  S = { dest: '', days: 0, tickets: [], plan: null, places: [], selPlaces: [], style: '', mapQ: '' };
+  document.getElementById('di').value = '';
+  document.getElementById('tlist').innerHTML = '';
+  document.getElementById('bnav').style.display = 'none';
   showS('welcome');
-}
-
-function fallbackPlan(){
-  document.getElementById('ploading').style.display='none';
-  document.getElementById('pcontent').style.display='block';
-  document.getElementById('dtabs').innerHTML='<button class="dtab act" onclick="swDay(1)" id="tab-1">Gün 1</button>';
-  document.getElementById('dplans').innerHTML=`<div class="dplan act" id="day-1"><div class="dcard"><div class="dcardtitle">📅 Gün 1 — ${S.dest}</div><div style="text-align:center;padding:24px;color:var(--muted)">Plan oluşturulurken bir hata oluştu. Lütfen tekrar deneyin.</div></div></div>`;
-  S.packingList=[];S.budgetEstimate={};S.generalTips=[];
 }
 </script>
 </body>
